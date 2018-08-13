@@ -16,11 +16,11 @@ Vagrant.configure("2") do |config|
   config.vm.box_version = "1804.02"
 
   config.vm.define :php1 do |php1|
-    php1.vm.network :public_network, ip: "192.168.0.101"
+    php1.vm.network :private_network, ip: "192.168.0.101"
   end
 
-  config.vm.define :php2 do
-    php2.vm.network :public_network, ip: "192.168.0.102"
+  config.vm.define :php2 do |php2|
+    php2.vm.network :private_network, ip: "192.168.0.102"
   end
 
 
