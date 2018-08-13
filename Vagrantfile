@@ -17,13 +17,11 @@ Vagrant.configure("2") do |config|
 
   config.vm.define :php1 do |php1|
     php1.vm.network :private_network, ip: "192.168.0.101"
-    php1.vm.network "forwarded_port", guest: 22, host: 2222
     php1.vm.network "forwarded_port", guest: 80, host: 8080
   end
 
   config.vm.define :php2 do |php2|
     php2.vm.network :private_network, ip: "192.168.0.102"
-    php2.vm.network "forwarded_port", guest: 22, host: 2222
     php2.vm.network "forwarded_port", guest: 80, host: 8080
   end
 
