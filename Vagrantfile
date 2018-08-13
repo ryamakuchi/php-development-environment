@@ -15,12 +15,12 @@ Vagrant.configure("2") do |config|
   config.vm.box = "centos/7"
   config.vm.box_version = "1804.02"
 
-  config.vm.define :php1 do
-
+  config.vm.define :php1 do |php1|
+    php1.vm.network :public_network, ip: "192.168.0.101"
   end
 
   config.vm.define :php2 do
-
+    php2.vm.network :public_network, ip: "192.168.0.102"
   end
 
 
