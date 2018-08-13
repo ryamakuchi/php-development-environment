@@ -15,6 +15,15 @@ Vagrant.configure("2") do |config|
   config.vm.box = "centos/7"
   config.vm.box_version = "1804.02"
 
+  config.vm.define :php1 do
+
+  end
+
+  config.vm.define :php2 do
+
+  end
+
+
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
   # `vagrant box outdated`. This is not recommended.
