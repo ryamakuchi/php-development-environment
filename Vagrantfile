@@ -18,7 +18,7 @@ Vagrant.configure("2") do |config|
   config.vm.define :php1 do |php1|
     php1.vm.network :private_network, ip: "192.168.33.101"
     php1.vm.network "forwarded_port", guest: 80, host: 8080
-    php1.vm.synced_folder "../hello-php1", "/hello-php1"
+    php1.vm.synced_folder "../hello-php1", "/var/www/html/hello-php1"
   end
 
   config.vm.define :php2 do |php2|
